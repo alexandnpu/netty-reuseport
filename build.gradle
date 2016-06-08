@@ -1,0 +1,21 @@
+apply plugin: 'application'
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.netty:netty-codec-http:5.0.0.Alpha2'
+    compile 'io.netty:netty-handler:5.0.0.Alpha2'
+    compile 'io.netty:netty-transport:5.0.0.Alpha2'
+    compile 'io.netty:netty-transport-native-epoll:5.0.0.Alpha2:linux-x86_64'
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+mainClassName = "nettyreuseport.ReusePortServer"
+
+group = "com.github.mikepii"
+version = "0.2"
